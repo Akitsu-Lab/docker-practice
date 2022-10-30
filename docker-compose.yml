@@ -5,12 +5,17 @@ services:
     platform: linux/amd64
     container_name: "mysql-db"
     environment:
+      # rootのパスワードを設定
       MYSQL_ROOT_PASSWORD: root
+      # DBを作成
       MYSQL_DATABASE: book
+      # ユーザ作成
       MYSQL_USER: docker
       MYSQL_PASSWORD: password
     volumes:
+      # データ永続化
       - ./data:/var/lib/mysql
+      # 設定ファイル共有
       - ./db/my.conf:/etc/mysql/conf.d/my.cnf
       # sqlを共有
       - ./db/sql:/docker-entrypoint-initdb.d
