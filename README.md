@@ -9,18 +9,18 @@ docker練習用のリポジトリである。
    git clone git@github.com:Akitsu-Lab/docker-practice.git
     ```
 2. 環境変数を設定
-```shell
-read PASS
-```
-```shell
-export DB_ROOT_PASS=PASS
-```
-```shell
-read USER_PASS
-```
-```shell
-export DB_USER_PASS=USER_PASS
-```
+   ```shell
+   read PASS
+   ```
+   ```shell
+   export DB_ROOT_PASS=PASS
+   ```
+   ```shell
+   read USER_PASS
+   ```
+   ```shell
+   export DB_USER_PASS=USER_PASS
+   ```
 3. コンテナの立ち上げ
     ```shell
     docker-compose up -d
