@@ -26,13 +26,24 @@ docker exec -it コンテナID /bin/bash
 ```shell
 mysql -u root -p
 ```
-5. コンテナのストップ＆停止
+- mysqlからログアウト
 ```shell
-docker-compose restart
+exit
+```
+5. コンテナからログアウト
+```shell
+exit
+```
+6. コンテナのストップ＆停止
+```shell
+docker-compose down
 ```
 
 ### その他のコマンド
-
+- 再起動
+```shell
+docker-compose restart
+```
 - docker-compose.ymlで管理されているコンテナの一覧を取得
 ```shell
 docker-compose ps
