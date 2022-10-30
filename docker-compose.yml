@@ -6,12 +6,12 @@ services:
     container_name: "mysql-db"
     environment:
       # rootのパスワードを設定
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
       # DBを作成
       MYSQL_DATABASE: book
       # ユーザ作成
       MYSQL_USER: docker
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: ${DB_USER_PASS}
     volumes:
       # データ永続化
       - ./data:/var/lib/mysql
