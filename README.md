@@ -5,47 +5,47 @@ docker練習用のリポジトリである。
 実際にローカルでdockerを立ち上げてみる。
 ## 利用手順
 1. リポジトリをクローン
-```shell
-git clone git@github.com:Akitsu-Lab/docker-practice.git
-```
+    ```shell
+    git clone git@github.com:Akitsu-Lab/docker-practice.git
+    ```
 2. コンテナの立ち上げ
-```shell
-docker-compose up -d
-```
+    ```shell
+    docker-compose up -d
+    ```
 3. コンテナに入る
-- コンテナIDを調べる
-```shell
-docker ps 
-```
-- コンテナIDを指定し、コンテナに入る
-```shell
-docker exec -it コンテナID /bin/bash
-```
+   - コンテナIDを調べる
+    ```shell
+    docker ps 
+    ```
+   - コンテナIDを指定し、コンテナに入る
+    ```shell
+    docker exec -it コンテナID /bin/bash
+    ```
 4. mysqlにログイン
-- パスワードはdocker-compose.ymlのMYSQL_ROOT_PASSWORDを使用
-```shell
-mysql -u root -p
-```
-- mysqlからログアウト
-```shell
-exit
-```
+   - パスワードはdocker-compose.ymlのMYSQL_ROOT_PASSWORDを使用
+    ```shell
+    mysql -u root -p
+    ```
+   - mysqlからログアウト
+    ```shell
+    exit
+    ```
 5. コンテナからログアウト
-```shell
-exit
-```
+    ```shell
+    exit
+    ```
 6. コンテナのストップ＆停止
-```shell
-docker-compose down
-```
+    ```shell
+    docker-compose down
+    ```
 
 ### その他のコマンド
 - 再起動
-```shell
-docker-compose restart
-```
+    ```shell
+    docker-compose restart
+    ```
 - docker-compose.ymlで管理されているコンテナの一覧を取得
-```shell
-docker-compose ps
-```
+    ```shell
+    docker-compose ps
+    ```
 
