@@ -1,12 +1,22 @@
----- drop ----
-DROP TABLE IF EXISTS `test_table`;
+DROP DATABASE IF EXISTS book;
+CREATE DATABASE book DEFAULT CHARACTER SET utf8;
 
----- create ----
-create table IF not exists `test_table`
+USE book;
+
+DROP TABLE IF EXISTS BOOK;
+
+CREATE TABLE `BOOK`
 (
-    `id`               INT(20) AUTO_INCREMENT,
-    `name`             VARCHAR(20) NOT NULL,
-    `created_at`       Datetime DEFAULT NULL,
-    `updated_at`       Datetime DEFAULT NULL,
+    `id`      int(11) NOT NULL AUTO_INCREMENT,
+    `title`   varchar(128) DEFAULT Null,
+    `pages`   int(11),
+    `content` TEXT,
     PRIMARY KEY (`id`)
-    ) DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+);
+
+INSERT INTO BOOK
+VALUES (1, 'Java', 332, 'Javaについて');
+INSERT INTO BOOK
+VALUES (2, 'SpringBoot', 80, 'SpringBootについて');
+INSERT INTO BOOK
+VALUES (3, 'Git', 12, 'Gitについて');
