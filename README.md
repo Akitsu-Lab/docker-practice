@@ -1,1 +1,40 @@
 # docker-practice
+
+## このリポジトリは？
+docker練習用のリポジトリである。
+実際にローカルでdockerを立ち上げてみる。
+## 利用手順
+1. リポジトリをクローン
+```shell
+git clone git@github.com:Akitsu-Lab/docker-practice.git
+```
+2. コンテナの立ち上げ
+```shell
+docker-compose up -d
+```
+3. コンテナに入る
+- コンテナIDを調べる
+```shell
+docker ps 
+```
+- コンテナIDを指定し、コンテナに入る
+```shell
+docker exec -it コンテナID /bin/bash
+```
+4. mysqlにログイン
+- パスワードはdocker-compose.ymlのMYSQL_ROOT_PASSWORDを使用
+```shell
+mysql -u root -p
+```
+5. コンテナのストップ＆停止
+```shell
+docker-compose restart
+```
+
+### その他のコマンド
+
+- docker-compose.ymlで管理されているコンテナの一覧を取得
+```shell
+docker-compose ps
+```
+
